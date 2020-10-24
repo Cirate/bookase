@@ -78,6 +78,10 @@
         <PlatformTarget>x86</PlatformTarget>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99">
+          <HintPath>..\..\..\packages\SimpleInjector.5.1.0\lib\netstandard2.1\SimpleInjector.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
         <Reference Include="System.Core" />
@@ -97,6 +101,7 @@
     <ItemGroup>
         <None Include="Info.plist" />
         <None Include="Entitlements.plist" />
+        <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Main.cs" />
@@ -107,9 +112,13 @@
         </Compile>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\..\CirateSolutions.Bookase.Core\CirateSolutions.Bookase.Core.csproj">
+      <ProjectReference Include="..\CirateSolutions.Bookase.Core\CirateSolutions.Bookase.Core.csproj">
         <Project>{f78dead7-e49f-4c08-9f71-f77fb5d28a9b}</Project>
         <Name>CirateSolutions.Bookase.Core</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\CirateSolutions.Bookase.MVP\CirateSolutions.Bookase.MVP.csproj">
+        <Project>{a8fe6516-ec05-4676-b33a-518ad270b710}</Project>
+        <Name>CirateSolutions.Bookase.MVP</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="..\CirateSolutions.Bookase\CirateSolutions.Bookase.projitems" Label="Shared" Condition="Exists('..\CirateSolutions.Bookase\CirateSolutions.Bookase.projitems')" />

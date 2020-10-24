@@ -11,14 +11,7 @@
         android:id="@+id/myButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
-        />
-
-    <Button
-        android:id="@+id/GoNextButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go Next!"
+        android:text="Go back!"
         />
 
 </LinearLayout>
