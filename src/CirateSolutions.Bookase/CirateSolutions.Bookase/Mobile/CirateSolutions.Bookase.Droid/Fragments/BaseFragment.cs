@@ -6,9 +6,14 @@ using CirateSolutions.Bookase.MVP.Interfaces;
 
 namespace CirateSolutions.Bookase.Droid.Fragments
 {
+    public abstract class BaseFragment :
+        Fragment,
+        IView
+    {
+    }
+
     public abstract class BaseFragment<TPresenter, TView>
-        : Fragment,
-          IView
+        : BaseFragment
         where TPresenter : class, IPresenter<TView>
         where TView : class, IView
     {
@@ -31,30 +36,15 @@ namespace CirateSolutions.Bookase.Droid.Fragments
         {
             DetachEvents();
             ClearFoundViews();
+            Presenter.OnViewDestroyed();
+            Presenter.Dispose();
+            _presenter = null;
             base.OnDestroyView();
         }
 
-        protected virtual void AttachEvents()
-        {
-        }
-
-        protected virtual void DetachEvents()
-        {
-        }
-
-        protected virtual void FindViews()
-        {
-
-        }
-
-        protected virtual void ClearFoundViews()
-        {
-
-        }
-
-        public string FragmentJavaName()
-        {
-            return Java.Lang.Class.FromType(GetType()).Name;
-        }
+        protected virtual void AttachEvents() { }
+        protected virtual void DetachEvents() { }
+        protected virtual void FindViews() { }
+        protected virtual void ClearFoundViews() { }
     }
 }

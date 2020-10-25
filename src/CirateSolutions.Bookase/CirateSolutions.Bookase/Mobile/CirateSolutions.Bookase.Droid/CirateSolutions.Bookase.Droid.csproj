@@ -159,11 +159,16 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Activites\BootstrapActivity.cs" />
-        <Compile Include="Activites\ShellActivity.cs" />
+        <Compile Include="Activities\Abstractions\BootstrapActivity''.cs" />
+        <Compile Include="Activities\Abstractions\BootstrapActivity.cs" />
+        <Compile Include="Activities\Interfaces\IBootstrapActivity.cs" />
+        <Compile Include="Activities\ShellActivity.cs" />
+        <Compile Include="BookaseAndroidBootstrap.cs" />
+        <Compile Include="Extensions\FragmentExtensions\FragmentExtensions.cs" />
         <Compile Include="Fragments\BaseFragment.cs" />
         <Compile Include="Fragments\DetailsFragment.cs" />
         <Compile Include="Fragments\MainFragment.cs" />
+        <Compile Include="NavigationService.cs" />
         <Compile Include="Resources\Resource.designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

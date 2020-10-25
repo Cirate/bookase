@@ -35,7 +35,7 @@ namespace CirateSolutions.Bookase.Droid.Fragments
 
         private void ButtonOnClick(object sender, EventArgs e)
         {
-            ParentFragmentManager.PopBackStack();
+            Presenter.GoBack();
         }
     }
 }

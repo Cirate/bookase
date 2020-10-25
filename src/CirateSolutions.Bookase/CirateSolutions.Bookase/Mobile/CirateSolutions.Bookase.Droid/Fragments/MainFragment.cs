@@ -46,12 +46,7 @@ namespace CirateSolutions.Bookase.Droid.Fragments
         {
             if (sender == _goNextButton)
             {
-                var fragmentManager = ParentFragmentManager;
-                var fragmentTransaction = fragmentManager.BeginTransaction();
-                var fragment = Activator.CreateInstance<DetailsFragment>();
-                fragmentTransaction.AddToBackStack(fragment.FragmentJavaName());
-                fragmentTransaction.Add(Resource.Id.ShellContentFrame, fragment);
-                fragmentTransaction.Commit();
+                Presenter.NavigateToDetails();
             }
             else if (sender == _button)
             {

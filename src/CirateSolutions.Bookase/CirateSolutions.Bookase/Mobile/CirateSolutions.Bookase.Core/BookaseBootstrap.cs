@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using CirateSolutions.Bookase.Core.Presenters.Details;
 using CirateSolutions.Bookase.Core.Presenters.Details.Interfaces;
@@ -10,6 +11,8 @@ namespace CirateSolutions.Bookase.Core
 {
     public class BookaseBootstrap : Bootstrap
     {
+        protected override Type InitialPresenter => typeof(IMainPresenter);
+
         protected override async Task RegisterDependencies(Container container)
         {
             await base.RegisterDependencies(container);
